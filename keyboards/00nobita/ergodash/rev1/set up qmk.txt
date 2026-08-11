@@ -1,0 +1,15 @@
+Setup QMK
+ https://docs.qmk.fm/newbs_getting_started
+Setting Up Your QMK Environment
+ 
+ curl -fsSL https://install.qmk.fm | sh
+ 
+ Run QMK setup
+ qmk setup
+ 
+  
+ cd ./qmk_firmware-master
+  $ qmk compile -kb omkbd/ergodash/rev1 -km default
+ (qmk compile -kb キーボード名 -km キーマップ名 ) 
+ 
+ 

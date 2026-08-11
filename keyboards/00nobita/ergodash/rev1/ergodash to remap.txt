@@ -1,0 +1,20 @@
+REMAP（VIA）で「ErgoDash」のキーマップを変更できるようにする
+https://ydk.vc/using-ergodash-remap/
+
+QMKfirmをダウンロード
+https://github.com/qmk/qmk_firmware
+
+qmk_firmware\keyboardsを開きomkbd以外を削除
+omkbd>ergodash>riv1>default>rules.mkを開く
+VIA_ENABLE = yes を追記
+
+omkbd>ergodash>riv1>keyboard.json を開くvidのコードを書き換える（重複するとremapでうまく動かない）
+"vid": "0x89ef"
+
+omkbd>ergodash>riv1>config.h を開く　下記を追加して右手をマスターに
+#define MASTER_RIGHT
+
+compile
+cd ./qmk_firmware-master
+  $ qmk compile -kb omkbd/ergodash/rev1 -km default
+ (qmk compile -kb キーボード名 -km キーマップ名 ) 
